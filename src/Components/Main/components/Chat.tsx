@@ -20,10 +20,11 @@ function Chat() {
           maxWidth: "310px",
         }}
       >
-        <img width="250px" src="src/images/chatIcon.svg"></img>
+        <img width="250px" src="/src/images/chatIcon.svg"></img>
         <Typography
           sx={{
-            fontSize: "26px",
+            fontFamily: 'Playfair Display, serif',
+            fontSize: "28px",
             color: "rgb(230, 230, 230)",
             fontWeight: "600",
             textAlign: "center",
