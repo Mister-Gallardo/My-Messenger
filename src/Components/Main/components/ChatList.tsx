@@ -67,6 +67,7 @@ function ChatList() {
           display: "flex",
           padding: "3px 10px",
           flexDirection: "column",
+          gap: '8px',
           borderTop: "1px white solid",
           borderBottom: "1px white solid",
           "&::-webkit-scrollbar": {
