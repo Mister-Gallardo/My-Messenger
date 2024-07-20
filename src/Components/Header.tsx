@@ -4,9 +4,9 @@ function Header() {
   return (
     <Box
       sx={{
-        backgroundColor: "rgb(40, 40, 45)",
+        backgroundColor: "rgb(30, 30, 35)",
         boxShadow: "0px 0px 5px 0px black",
-        padding: "8px 0px 12px",
+        padding: "6px 0px 10px",
         display: "flex",
         justifyContent: "center",
       }}
@@ -16,7 +16,7 @@ function Header() {
           fontWeight: "900",
           fontFamily: '"Edu AU VIC WA NT Hand", cursive',
           textTransform: "none",
-          fontSize: "32px",
+          fontSize: "30px",
           userSelect: "none",
           color: "whitesmoke",
         }}
