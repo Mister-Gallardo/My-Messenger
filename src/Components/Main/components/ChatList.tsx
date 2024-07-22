@@ -11,7 +11,7 @@ import { IContact } from "../../../services/Interfaces";
 import ChatButton from "./ChatButton";
 
 function ChatList() {
-  const [value, setValue] = useState("");
+  const [searchText, setSearchText] = useState("");
   const [contacts, setContacts] = useState<IContact[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -24,6 +24,10 @@ function ChatList() {
     setContacts(response);
     setLoading(false);
   }
+
+  const filteredContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <Box
@@ -38,9 +42,9 @@ function ChatList() {
       }}
     >
       <TextField
-        value={value}
+        value={searchText}
         onChange={(e) => {
-          setValue(e.target.value);
+          setSearchText(e.target.value);
         }}
         size="small"
         placeholder="Поиск"
@@ -82,7 +86,7 @@ function ChatList() {
         {loading ? (
           <CircularProgress size={70} sx={{ margin: "100px auto" }} />
         ) : (
-          contacts.map((contact: IContact) => (
+          filteredContacts && filteredContacts.map((contact: IContact) => (
             <ChatButton key={contact.recipeId} contact={contact} />
           ))
         )}
