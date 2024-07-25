@@ -33,11 +33,11 @@ function ChatList() {
     <Box
       sx={{
         height: "100%",
-        width: "380px",
+        minWidth: "330px",
         borderRight: "1px solid white",
         backgroundColor: "rgb(50, 50, 55)",
-        borderTopRightRadius: "20px",
-        borderEndEndRadius: "20px",
+        // borderTopRightRadius: "20px",
+        // borderEndEndRadius: "20px",
         padding: "12px 14px",
       }}
     >
@@ -87,7 +87,7 @@ function ChatList() {
           <CircularProgress size={70} sx={{ margin: "100px auto" }} />
         ) : (
           filteredContacts && filteredContacts.map((contact: IContact) => (
-            <ChatButton key={contact.recipeId} contact={contact} />
+            <ChatButton key={contact.recipeId} contact={contact}  />
           ))
         )}
       </Box>
