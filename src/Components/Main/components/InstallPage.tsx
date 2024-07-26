@@ -1,7 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 
 function InstallApp() {
-
   return (
     <Box
       sx={{
@@ -21,7 +20,7 @@ function InstallApp() {
           maxWidth: "310px",
         }}
       >
-        <img width="250px" src="./src/images/chatIcon.svg"></img>
+        <img width="220px" src="images/chatIcon.svg"></img>
         <Typography
           sx={{
             fontFamily: "Playfair Display, serif",
