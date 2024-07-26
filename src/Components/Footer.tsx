@@ -9,7 +9,8 @@ function Footer() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        height: "50px",
+        height: "35px",
+        minHeight: '35px',
         padding: "0px 25px",
         userSelect: "none",
       }}
@@ -25,7 +26,7 @@ function Footer() {
       <Typography
         sx={{
           fontFamily: "Edu AU VIC WA NT Hand, cursive",
-          fontSize: "18px",
+          fontSize: "16px",
           color: "white",
           fontWeight: "500",
         }}
