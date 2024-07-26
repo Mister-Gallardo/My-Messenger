@@ -32,9 +32,10 @@ function ChatList() {
   return (
     <Box
       sx={{
+        // order: '2',
         height: "100%",
         minWidth: "330px",
-        borderRight: "1px solid white",
+        borderRight: {xs: 'none', md: "1px solid white"},
         backgroundColor: "rgb(50, 50, 55)",
         // borderTopRightRadius: "20px",
         // borderEndEndRadius: "20px",

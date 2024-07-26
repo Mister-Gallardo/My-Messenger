@@ -6,6 +6,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import InstallApp from "./InstallPage";
 import TagFacesIcon from "@mui/icons-material/TagFaces";
 import AddIcon from "@mui/icons-material/Add";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import { ChatContext } from "..";
 import { IContact } from "../../../services/Interfaces";
@@ -38,7 +39,7 @@ function ChatPage() {
   }, [selectedContact]);
 
   if (!contact) {
-    return
+    return;
   }
 
   return (
@@ -54,7 +55,7 @@ function ChatPage() {
       <Box
         sx={{
           width: "100%",
-          padding: "10px 20px",
+          padding: { xs: "8px 10px", md: "10px 20px" },
           backgroundColor: "rgb(50, 50, 55)",
           display: "flex",
           justifyContent: "space-between",
@@ -68,6 +69,15 @@ function ChatPage() {
             alignItems: "center",
           }}
         >
+          <IconButton
+            sx={{
+              display: { xs: "block", md: "none" },
+              margin: "0px -10px 0px -8px",
+            }}
+            onClick={() => setSelectedContact(null)}
+          >
+            <ArrowBackIcon sx={{ fontSize: "28px", color: "whitesmoke" }} />
+          </IconButton>
           <Avatar
             alt="Remy Sharp"
             src={contact.imageUrl}
@@ -79,7 +89,7 @@ function ChatPage() {
             {contact.name.slice(0, contact.name.indexOf(" "))}
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", gap: "10px" }}>
+        <Box sx={{ display: "flex", gap: { xs: "2px", md: "10px" } }}>
           <IconButton
             sx={{
               padding: "7px",
@@ -111,12 +121,11 @@ function ChatPage() {
         sx={{
           width: "100%",
           marginTop: "auto",
-          padding: "10px 20px",
+          padding: { xs: "8px 5px", md: "10px 20px" },
           backgroundColor: "rgb(50, 50, 55)",
           display: "flex",
-          // gap: '12px',
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "end",
         }}
       >
         <IconButton
@@ -141,7 +150,7 @@ function ChatPage() {
           multiline
           maxRows={6}
           sx={{
-            minWidth: "240px",
+            minWidth: "185px",
             width: "85%",
             "& fieldset": {
               borderRadius: "10px",
