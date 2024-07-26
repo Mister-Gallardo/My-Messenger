@@ -21,7 +21,7 @@ function InstallApp() {
           maxWidth: "310px",
         }}
       >
-        <img width="250px" src="/src/images/chatIcon.svg"></img>
+        <img width="250px" src="./src/images/chatIcon.svg"></img>
         <Typography
           sx={{
             fontFamily: "Playfair Display, serif",
